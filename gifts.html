@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gifts for My Lady</title>
+  <style>
+    :root {
+      --lavender: #d6befa;
+      --purple: #a76eee;
+      --purple-dark: #7c46d9;
+      --green: #98fb98;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #efdfff 0%, var(--lavender) 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2d1b3d;
+      text-align: center;
+      padding: 24px 12px 40px;
+    }
+
+    h1 {
+      background-color: var(--purple);
+      margin: 0;
+      padding: 18px 16px;
+      text-align: center;
+      color: var(--white);
+      border-radius: 16px 16px 0 0;
+      font-size: clamp(2rem, 3vw, 2.8rem);
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 24px auto;
+      max-width: 900px;
+    }
+
+    .gallery img {
+      width: min(45vw, 330px);
+      border-radius: 18px;
+      box-shadow: 0 12px 24px rgba(84, 45, 140, 0.18);
+    }
+
+    p {
+      margin: 16px 0 22px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--purple);
+      color: var(--white);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      background-color: var(--green);
+      margin: 0 auto 20px;
+      padding: 16px;
+      text-align: center;
+      color: var(--white);
+      max-width: 900px;
+      border-radius: 16px;
+      font-size: clamp(1.5rem, 2vw, 2rem);
+    }
+
+    video {
+      width: min(90vw, 540px);
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 12px 24px rgba(84, 45, 140, 0.18);
+      background: #000;
+    }
+
+    .note {
+      margin-top: 18px;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+  <h1>GIFTS FOR MY LADY</h1>
+
+  <div class="gallery">
+    <img src="chocolate.jpg" alt="Chocolate gift" />
+    <img src="flowers.jpg" alt="Flower gift" />
+  </div>
+
+  <p><b>I'll get you the real ones, I swear.</b></p>
+  <a class="btn" href="readmore.html">BACK</a>
+
+  <h2>A SONG THAT I THINK YOU'LL LIKE</h2>
+  <video src="gotyou.mp4" controls playsinline></video>
+  <p class="note">I tried putting the Spotify link but failed, so here it is as a video.</p>
+</body>
+</html>

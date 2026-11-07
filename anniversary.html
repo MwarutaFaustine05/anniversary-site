@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Anniversary</title>
+  <style>
+    :root {
+      --lavender: #d6befa;
+      --purple: #a76eee;
+      --purple-dark: #7c46d9;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #efdfff 0%, var(--lavender) 100%);
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2d1b3d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .page {
+      width: min(90vw, 700px);
+      text-align: center;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 24px;
+      padding: 24px 18px 32px;
+      box-shadow: 0 18px 45px rgba(109, 62, 171, 0.15);
+    }
+
+    h1 {
+      background-color: var(--purple);
+      margin: 0 0 18px;
+      padding: 18px 16px;
+      text-align: center;
+      color: var(--white);
+      border-radius: 16px 16px 0 0;
+      letter-spacing: 1px;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .large-text {
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      margin: 0 0 20px;
+      font-weight: 700;
+    }
+
+    .photo-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 18px 0;
+    }
+
+    .photo {
+      width: min(60vw, 420px);
+      border-radius: 18px;
+      box-shadow: 0 12px 25px rgba(84, 45, 140, 0.2);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--purple);
+      color: var(--white);
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: var(--purple-dark);
+      transform: translateY(-1px);
+    }
+
+    .music-toggle {
+      margin-top: 18px;
+      border: none;
+      background: rgba(255, 255, 255, 0.7);
+      color: #4a2464;
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .music-player {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <video class="music-player" id="bgMusic" autoplay muted loop playsinline>
+    <source src="gotyou.mp4" type="video/mp4" />
+  </video>
+
+  <main class="page">
+    <h1>HAPPY ANNIVERSARY BABY</h1>
+    <p class="large-text"><b>Cheers to us on our three month anniversary</b></p>
+
+    <div class="photo-wrap">
+      <img class="photo" src="blowing%20kisses.jpg" alt="Celebration photo" />
+    </div>
+
+    <div>
+      <a class="btn" href="readmore.html">READ MORE</a>
+    </div>
+
+    <button class="music-toggle" id="musicToggle" type="button">🔊 Music on</button>
+  </main>
+
+  <script>
+    const musicToggle = document.getElementById('musicToggle');
+    const bgMusic = document.getElementById('bgMusic');
+
+    bgMusic.volume = 0.35;
+    bgMusic.muted = true;
+    musicToggle.textContent = '🔊 Music on';
+
+    musicToggle.addEventListener('click', () => {
+      bgMusic.muted = !bgMusic.muted;
+      musicToggle.textContent = bgMusic.muted ? '🔊 Music on' : '🔇 Music off';
+    });
+  </script>
+</body>
+</html>
+
